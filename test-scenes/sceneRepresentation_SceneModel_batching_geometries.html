@@ -133,19 +133,19 @@
 
     // Grid lines
 
-    // const grid = buildGridGeometry({
-    //     size: 10,
-    //     divisions: 10
-    // });
+    const grid = buildGridGeometry({
+        size: 10,
+        divisions: 10
+    });
 
-    // sceneModel.createMesh({
-    //     id: "gridMesh",
-    //     primitive: "lines",
-    //     positions: grid.positions,
-    //     indices: grid.indices,
-    //     position: [25, 0, 0],
-    //     color: [0, 1, 0]
-    // });
+    sceneModel.createMesh({
+        id: "gridMesh",
+        primitive: "lines",
+        positions: grid.positions,
+        indices: grid.indices,
+        position: [25, 0, 0],
+        color: [0, 1, 0]
+    });
 
     // Text
 
