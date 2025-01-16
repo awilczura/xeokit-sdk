@@ -25,12 +25,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      # - name: Build
+      #   run: npm run build
 
       - name: Test
         run: |
           echo "$DOT_ENV" > .env 
+          npx playwright install --with-deps chromium
           npm run test
         env:
           DOT_ENV: ${{ secrets.PERCY_ENV }}
